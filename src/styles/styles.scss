@@ -1,0 +1,39 @@
+//Importing stuff
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import '~bootstrap/scss/bootstrap';
+// Defining variables
+:root {
+
+  //Colors
+  --primaryColor: #0A2351;
+  --secondaryColor: #B79433;
+  --secondGolden: #e9b015;
+  --bgColor: #D9DBF1;
+  --whiteColor: #FAFAFA;
+  --blackColor: #070707;
+  --lightBlue: #708CB4;
+  --lightPurple: #707CBC;
+
+  //Breakpoints
+  --break-sm: 576px;
+  --break-md: 768px;
+  --break-lg: 992px;
+  --break-xl: 1200px;
+  --break-xxl: 1400px;
+
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+  
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+}
+  
