@@ -1,0 +1,193 @@
+
+.contactHeader {
+    text-align: center;
+    padding: 3rem 0;
+    h1{
+        font-weight: 900;
+    }
+}
+
+.contactContent {
+    background-color: var(--lightGray);
+    border-radius: 8px;
+    padding: 20px;
+    ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--secondGolden);
+      }
+
+} 
+
+.boldCharacters{
+    font-weight: 900;
+}
+
+
+.instagram{
+	height: 50px;
+	width: 50px;
+  overflow: hidden;;
+	border-radius: 5px;
+	position: absolute;
+	animation: animate_logo 10s infinite alternate;
+	&::after{
+		content: '';
+		position: relative;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 2000px;
+		background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #f66e48 50%, #de005e 75%, #5335cf 100%);
+		animation: animate_bg 10s infinite linear;
+	}
+}
+.logo{
+		>div{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border: #fff 2px solid;
+		z-index: 2;
+			&.logo_light{
+				border: 2px #fff solid;
+				border-radius: 5px;
+				right: 23%;
+				top: 23%;
+				left: auto;
+				animation: animate_light 5s infinite normal;
+			}
+}
+	&_border{
+		border-radius: 5px;
+		width: 74%;
+		height: 74%;
+		margin-top: -37%;
+		margin-left: -37%;
+		animation: animate_border 5s infinite alternate;
+	}
+	&_circle{
+		width: 48%;
+		height: 48%;
+		border-radius: 10em;
+		margin-top: -24%;
+		margin-left: -24%;
+		animation: animate_circle 5s infinite alternate;
+	}
+}
+
+/*list of keyframes*/
+@keyframes animate_bg{
+	0%{
+		top: 0;
+	}
+	50%{
+		top: -1800px;
+	}
+	100%{
+		top: 0;
+	}
+}
+
+@keyframes animate_logo{
+	0%{
+		transform: scale(0);
+		border-radius: 5px;
+	}
+	2.5%{
+		transform: scale(1.1);
+		border-radius: 8em;
+	}
+	5%{
+		transform: scale(1);
+		border-radius: 5px;
+	}
+	96%{
+		transform: scale(1);
+		border-radius: 5px;
+	}
+	98%{
+		transform: scale(1.1);
+		border-radius: 8em;
+	}
+	100%{
+		transform: scale(0);
+	}
+}
+
+@keyframes animate_border{
+	0%{
+		border-radius: 8em;
+		transform: scale(0);
+		opacity: 0;
+	}
+	2%{
+		opacity: 0;
+	}
+	18%{
+		border-radius: 5px;
+		transform: scale(1);
+		opacity: 1;
+	}
+	90%{
+		border-radius: 5px;
+		transform: scale(1);
+	}
+}
+
+@keyframes animate_circle{
+	0%{
+		transform: scale(0);
+		opacity: 0;
+	}
+	5%{
+		transform: scale(0);
+		opacity: 0;
+	}
+	10%{
+		transform: scale(1.3);
+		opacity: 1;
+	}
+	15%{
+		transform: scale(1);
+	}
+	95%{
+		transform: scale(1);
+		background-color: transparent;
+	}
+	97%{
+		transform: scale(1.2);
+		background-color: #ffffff;
+	}
+	100%{
+		transform: scale(1);
+	}
+}
+
+@keyframes animate_light{
+	0%{
+		opacity: 0;
+	}
+	20%{
+		opacity: 0;
+	}
+	25%{
+		opacity: 1;
+	}
+	75%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+.contactLinks{
+    display: flex;
+    justify-content: center;
+}
