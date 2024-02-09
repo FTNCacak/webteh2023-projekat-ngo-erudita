@@ -75,9 +75,9 @@ const ContentContainer = (props) => {
           </div>
         </div>
       </nav>
-      <Container>
+      
         <div className={styles.contentBox}>{props.children}</div>
-      </Container>
+      
       <footer className={styles.footerContent}>
         <Container>
           <Row>
