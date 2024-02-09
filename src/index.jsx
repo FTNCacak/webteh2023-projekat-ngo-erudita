@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Test from './pages/Test';
 import ContentContainer from './compontents/ContentContainer';
 import ContactPage from './pages/ContactPage';
+import AboutUs from './pages/AboutUs';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
         </Route>
         
         <Route path="/kontakt" element={<ContactPage />} />
+        <Route path="/o-nama" element={<AboutUs />} />
       </Routes>
     </ContentContainer>
     </BrowserRouter>
