@@ -1,0 +1,32 @@
+.projectContainer{
+    .mainHeader{
+        text-align: center;
+        padding:50px 0;
+    }
+    
+}
+
+.projectDiv{
+        display: flex;
+        h5{
+            font-weight: 900;
+        }
+
+}
+
+.textProject{
+text-align: justify;
+    h3{
+        text-align: center;
+    }
+
+    a{
+      display: block;
+      text-decoration: none;  
+      text-align: center;
+    }
+
+    p{
+        padding: 0 50px;
+    }
+}
