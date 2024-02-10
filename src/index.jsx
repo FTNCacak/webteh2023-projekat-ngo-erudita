@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Test from './pages/Test';
 import ContentContainer from './compontents/ContentContainer';
-import ContactPage from './pages/ContactPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,7 +20,7 @@ root.render(
           <Route path="*" element={<NoPage />} /> */}
         </Route>
         
-        <Route path="/kontakt" element={<ContactPage />} />
+        <Route path="/kepo" element={<Test />} />
       </Routes>
     </ContentContainer>
     </BrowserRouter>
