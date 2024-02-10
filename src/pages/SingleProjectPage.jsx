@@ -1,20 +1,13 @@
 import styles from "./SingleProjectPage.module.scss";
-import { Col, Container, Fade, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import useHttpGet from "../Hooks/useHttpGet";
 import { useEffect, useState } from "react";
-
-//import ImageSlider from "../compontents/ImageSlider";
-
 import { nameToPathFormat } from "../helpers/helpFunctions";
-
 
 const SingleProjectPage = () => {
   const fetchData = useHttpGet("projects");
   const { projectUrl } = useParams();
-
-
- 
 
   //State koji cuva podatke trenutno izabranog projekta
   const [selectedData, setSelectedData] = useState();
@@ -40,7 +33,6 @@ const SingleProjectPage = () => {
           </Row>
         }
       </div>
-
     </Container>
   );
 };
