@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import useHttpGet from "../Hooks/useHttpGet";
 import { useEffect, useState } from "react";
+import { nameToPathFormat } from "../helpers/helpFunctions";
 
 const SingleProjectPage = () => {
   const fetchData = useHttpGet("projects");
@@ -16,17 +17,7 @@ const SingleProjectPage = () => {
       //provera da li se naziv projekta podudara sa url
       setSelectedData(
         fetchData.data.filter((data) => {
-          return (
-            data.project_name
-              .replaceAll(" ", "-")
-              .toLowerCase()
-              .replaceAll("š", "s")
-              .replaceAll("č", "c")
-              .replaceAll("ć", "c")
-              .replaceAll("ž", "z")
-              .replaceAll("đ", "dj")
-              .replaceAll("ð", "dj") === projectUrl
-          );
+          return nameToPathFormat(data.project_name) === projectUrl;
         })[0]
       );
   }, [fetchData]);

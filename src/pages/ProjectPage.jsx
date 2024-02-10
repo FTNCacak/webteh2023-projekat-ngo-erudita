@@ -3,6 +3,7 @@ import styles from "./ProjectPage.module.scss";
 import { Col, Row, Container } from "react-bootstrap";
 import useHttpGet from "../Hooks/useHttpGet";
 import { useEffect } from "react";
+import { nameToPathFormat } from "../helpers/helpFunctions";
 
 const ProjectPage = () => {
   const fetchData = useHttpGet("projects");
@@ -30,18 +31,7 @@ const ProjectPage = () => {
                       onClick={() => {
                         window.scroll(0, 0);
                       }}
-                      to={
-                        "/projekti/" +
-                        data.project_name
-                          .replaceAll(" ", "-")
-                          .toLowerCase()
-                          .replaceAll("š", "s")
-                          .replaceAll("č", "c")
-                          .replaceAll("ć", "c")
-                          .replaceAll("ž", "z")
-                          .replaceAll("đ", "dj")
-                          .replaceAll("ð", "dj")
-                      }
+                      to={"/projekti/" + nameToPathFormat(data.project_name)}
                     >
                       Saznajte više
                     </Link>
