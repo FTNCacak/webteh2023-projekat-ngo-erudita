@@ -19,15 +19,6 @@ const PhotoGallery = (imageProps) => {
   useEffect(() => {
     addImages(imageProps);
   }, [imageProps]);
-  //   const images2 = [
-  //     {
-  //       original: "/imgs/projects/Srusimo-4-zida-photo-2.jpg",
-  //     },
-  //     {
-  //       original: "/imgs/projects/Srusimo-4-zida-photo-3.jpg",
-  //     },
-  //   ];
-
   return (
     <ReactImageGallery
       items={images}
