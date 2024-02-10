@@ -19,7 +19,7 @@ app.use(cors());
 
 // Middleware to parse JSON bodies
 app.use(express.json());
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({ extended: true }));
 
 app.use('/api/auth', authRoutes);
 
@@ -52,9 +52,9 @@ app.get('/', (req, res) => {
 
 // Error Handling Middleware
 app.use((error, req, res, next) => {
-    res.status(error.status || 500);
-    res.json({ error: error.message });
-  });
+  res.status(error.status || 500);
+  res.json({ error: error.message });
+});
 
 // Define the port to listen on
 const PORT = process.env.PORT || 3001;
