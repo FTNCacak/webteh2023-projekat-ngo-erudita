@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const PhotoGallery = (imageProps) => {
   const [images, setImages] = useState([]);
   const addImages = (imag) => {
-    imag.imageProps.map(imag => {
+    imag.imageProps?.map(imag => {
       setImages((prev) => {
         return [
           ...prev,
