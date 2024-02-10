@@ -44,6 +44,13 @@ const contactRoutes = require('./src/routes/contactRoutes');
 
 app.use('/api', contactRoutes);
 
+
+//Use of carousel routes
+const carouselRoutes = require('./src/routes/carouselRoutes');
+
+app.use('/api', carouselRoutes);
+
+
 // Define a route for the root URL
 app.get('/', (req, res) => {
   // Send a response when this route is accessed
