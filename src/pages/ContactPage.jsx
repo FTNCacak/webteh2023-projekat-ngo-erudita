@@ -23,7 +23,7 @@ const ContactPage = () => {
 
       <div className={styles.contactContent}>
         <Row>
-          <Col md={3} sm={6} xs={12}>
+          <Col lg={3} md={4} sm={12} xs={12}>
             <ul>
               <h3>Kontakt</h3>
               <li>Bulevar Vuka Karadžića 108</li>
@@ -93,7 +93,7 @@ const ContactPage = () => {
               </ul>
             </div>
           </Col>
-          <Col>
+          <Col lg={9} md={8} sm={12} xs={12}>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2875.714269350735!2d20.325463412490823!3d43.88247133745033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47577225e33a9a3f%3A0xa935cea18898d725!2z0JHRg9C70LXQstCw0YAg0JLRg9C60LAg0JrQsNGA0LDRn9C40ZvQsCAxMDgsINCn0LDRh9Cw0Lo!5e0!3m2!1ssr!2srs!4v1707321724222!5m2!1ssr!2srs"
               className="w-100"

@@ -1,0 +1,25 @@
+.projectContainer {
+  h1 {
+    color: var(--primaryColor);
+    text-align: center;
+    padding: 5rem 0;
+    font-size: 3rem;
+  }
+  .imgContainer {
+    margin: 0 auto 5rem auto;
+    max-width: 1000px;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      max-height: 500px;
+      object-fit: cover;
+    }
+  }
+  p {
+    margin: 0 auto 3rem auto;
+    font-size: 1.25rem;
+    text-align: justify;
+    max-width: 1000px;
+  }
+}

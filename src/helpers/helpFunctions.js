@@ -7,5 +7,8 @@ export const nameToPathFormat = (name) => {
     .replaceAll("ć", "c")
     .replaceAll("ž", "z")
     .replaceAll("đ", "dj")
-    .replaceAll("ð", "dj");
+    .replaceAll("ð", "dj")
+    .replaceAll("„", "")
+    .replaceAll(`"`, "")
+    .replaceAll("“", "");
 };
