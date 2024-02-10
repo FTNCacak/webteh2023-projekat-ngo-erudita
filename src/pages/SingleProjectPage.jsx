@@ -7,14 +7,11 @@ import { useEffect, useState } from "react";
 //import ImageSlider from "../compontents/ImageSlider";
 
 import { nameToPathFormat } from "../helpers/helpFunctions";
-
+import PhotoGallery from "../compontents/PhotoGallery";
 
 const SingleProjectPage = () => {
   const fetchData = useHttpGet("projects");
   const { projectUrl } = useParams();
-
-
- 
 
   //State koji cuva podatke trenutno izabranog projekta
   const [selectedData, setSelectedData] = useState();
@@ -35,12 +32,16 @@ const SingleProjectPage = () => {
         {
           <Row className={styles.projectDiv}>
             <Col>
-              <h1>{selectedData?.id}</h1>
+              <h1>{selectedData?.project_name}</h1>
+              <div className={styles.imgContainer}>
+                <img src={selectedData?.photo} />
+              </div>
+              <p>{selectedData?.long_description}</p>
             </Col>
           </Row>
         }
       </div>
-
+      <PhotoGallery imageProps={selectedData?.image_paths}/>
     </Container>
   );
 };
