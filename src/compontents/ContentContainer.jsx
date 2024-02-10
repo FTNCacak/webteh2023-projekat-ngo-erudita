@@ -93,13 +93,13 @@ const ContentContainer = (props) => {
             <Col md={3} sm={6} xs={12}>
               <ul>
                 <li>
-                  <strong>PIB:</strong> 112421762
+                  <strong>PIB:</strong>112421762
                 </li>
                 <li>
-                  <strong>MB:</strong> 28320876
+                  <strong>MB:</strong>28320876
                 </li>
                 <li>
-                  <strong>TR:</strong> 340-11029152-47
+                  <strong>TR:</strong>340-11029152-47
                 </li>
               </ul>
 
