@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage';
 import AboutUs from './pages/AboutUs';
 import ProjectPage from './pages/ProjectPage';
 import SingleProjectPage from './pages/SingleProjectPage';
+import TeamMemberPage from './pages/TeamMemberPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,8 +27,10 @@ root.render(
         
         <Route path="/kontakt" element={<ContactPage />} />
         <Route path="/o-nama" element={<AboutUs />} />
+        <Route path="/tim/:projectUrl" element={<TeamMemberPage />} />
         <Route path="/projekti" element={<ProjectPage />} />
         <Route path="/projekti/:projectUrl" element={<SingleProjectPage />} />
+        
       </Routes>
     </ContentContainer>
     </BrowserRouter>

@@ -2,18 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./AboutUs.module.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import useHttpGet from "../Hooks/useHttpGet";
-
-const nameToPathFormat = (name) => {
-  return name
-    .replaceAll(" ", "-")
-    .toLowerCase()
-    .replaceAll("š", "s")
-    .replaceAll("č", "c")
-    .replaceAll("ć", "c")
-    .replaceAll("ž", "z")
-    .replaceAll("đ", "dj")
-    .replaceAll("ð","dj");
-};
+import { nameToPathFormat } from "../helpers/helpFunctions";
 
 const AboutUs = () => {
   const fetchData = useHttpGet("team");
@@ -36,27 +25,35 @@ const AboutUs = () => {
           </h5>
         </div>
         <Row className={styles.pictureColumn}>
-        {fetchData.data?.map((data) => {
-          return (
-            <Col lg={3} md={4} key={data.id}>
-              <div className={styles.teamPictures}>
-                <Link className={styles.imgLogoHolder} to={`/tim/${nameToPathFormat(data.first_name)}-${nameToPathFormat(data.last_name)}`}>
-                  <img
-                    decoding="async"
-                    width="300"
-                    height="300"
-                    src={process.env.PUBLIC_URL + data.photo}
-                    alt={data.first_name}
-                  />
-                  <h3>
-                    {data.first_name} {data.last_name}
-                  </h3>
-                  <h5>{data.title}</h5>
-                </Link>
-              </div>
-            </Col>
-          );
-        })}
+          {fetchData.data?.map((data) => {
+            return (
+              <Col lg={3} md={4} key={data.id}>
+                <div className={styles.teamPictures}>
+                  <Link
+                    className={styles.imgLogoHolder}
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
+                    to={`/tim/${nameToPathFormat(
+                      data.first_name
+                    )}-${nameToPathFormat(data.last_name)}`}
+                  >
+                    <img
+                      decoding="async"
+                      width="300"
+                      height="300"
+                      src={process.env.PUBLIC_URL + data.photo}
+                      alt={data.first_name}
+                    />
+                    <h3>
+                      {data.first_name} {data.last_name}
+                    </h3>
+                    <h5>{data.title}</h5>
+                  </Link>
+                </div>
+              </Col>
+            );
+          })}
         </Row>
       </div>
     </Container>
