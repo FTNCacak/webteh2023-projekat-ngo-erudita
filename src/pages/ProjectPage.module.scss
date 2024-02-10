@@ -1,32 +1,54 @@
-.projectContainer{
-    .mainHeader{
-        text-align: center;
-        padding:50px 0;
-    }
-    
+.projectContainer {
+  .mainHeader {
+    text-align: center;
+    padding: 50px 0;
+  }
 }
 
-.projectDiv{
-        display: flex;
-        h5{
-            font-weight: 900;
-        }
-
+.projectDiv {
+  h5 {
+    font-weight: 900;
+  }
+  flex-direction: row;
 }
 
-.textProject{
-text-align: justify;
-    h3{
-        text-align: center;
-    }
+.reverseRow {
+  flex-direction: row-reverse;
+}
 
-    a{
-      display: block;
-      text-decoration: none;  
-      text-align: center;
-    }
+.textCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-    p{
-        padding: 0 50px;
+.textProject {
+  text-align: justify;
+  h3 {
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: var(--secondGolden);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      color: var(--secondaryColor);
+      transition: all 0.15s ease-in-out;
     }
+  }
+
+  p {
+    padding: 0 3rem;
+  }
+}
+
+.contentProject {
+  padding: 3rem;
+  width: 100%;
+  img {
+    width: 100%;
+  }
 }
