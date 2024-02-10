@@ -177,10 +177,7 @@ const ContentContainer = (props) => {
 
               <ul>
                 <li>
-                  Statut - <a href="https://youtube.com">PDF</a>
-                </li>
-                <li>
-                  Odluka o osnivanju - <a href="https://youtube.com">PDF</a>
+                  Statut - <a target='_blank' rel="noreferrer" href={process.env.PUBLIC_URL+'/downloadable/Statut.pdf'}>PDF</a>
                 </li>
               </ul>
             </Col>
@@ -190,10 +187,10 @@ const ContentContainer = (props) => {
                 <li>Bulevar Vuka Karadžića 108</li>
                 <li>32102, Čačak, Srbija</li>
                 <li>
-                  <a href="https://youtube.com">kontakt@erudita.rs</a>
+                  <Link to='/contact'>kontakt@erudita.rs</Link>
                 </li>
                 <li>
-                  <a href="https://youtube.com">+381 69 308 62 07</a>
+                  <Link to='/contact'>+381 69 308 62 07</Link>
                 </li>
               </ul>
             </Col>

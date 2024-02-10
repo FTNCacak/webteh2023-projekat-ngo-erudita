@@ -11,6 +11,7 @@ import SingleProjectPage from "./pages/SingleProjectPage";
 import TeamMemberPage from "./pages/TeamMemberPage";
 import PageNotFound from "./pages/PageNotFound";
 import BlogPage from "./pages/BlogPage";
+import BlogPost from "./pages/BlogPost";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -23,6 +24,7 @@ root.render(
           <Route path="/" element={<Home />}></Route>
           <Route path="/kontakt" element={<ContactPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:projectUrl" element={<BlogPost />} />
           <Route path="/o-nama" element={<AboutUs />} />
           <Route path="/tim/:projectUrl" element={<TeamMemberPage />} />
           <Route path="/projekti" element={<ProjectPage />} />

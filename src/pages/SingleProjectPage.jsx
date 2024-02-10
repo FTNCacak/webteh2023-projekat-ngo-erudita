@@ -27,20 +27,13 @@ const SingleProjectPage = () => {
   return (
     <Container className={"containerFix"}>
       <div className={styles.projectContainer}>
-        {
-          <Row className={styles.projectDiv}>
-            <Col>
-              <h1>{selectedData?.project_name}</h1>
-              <div className={styles.imgContainer}>
-                <img src={selectedData?.photo} />
-              </div>
-              <p>{selectedData?.long_description}</p>
-            </Col>
-          </Row>
-        }
+        <h1>{selectedData?.project_name}</h1>
+        <div className={styles.imgContainer}>
+          <img src={selectedData?.photo} />
+        </div>
+        <p>{selectedData?.long_description}</p>
       </div>
-      <PhotoGallery imageProps={selectedData?.image_paths}/>
-
+      {selectedData?.image_paths.length != 0 ? <PhotoGallery imageProps={selectedData?.image_paths}/> : null}
     </Container>
   );
 };
