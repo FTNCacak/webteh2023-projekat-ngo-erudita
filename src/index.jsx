@@ -7,6 +7,7 @@ import Test from './pages/Test';
 import ContentContainer from './compontents/ContentContainer';
 import ContactPage from './pages/ContactPage';
 import ProjectPage from './pages/ProjectPage';
+import SingleProjectPage from './pages/SingleProjectPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,7 @@ root.render(
         
         <Route path="/kontakt" element={<ContactPage />} />
         <Route path="/projekti" element={<ProjectPage />} />
+        <Route path="/projekti/:projectUrl" element={<SingleProjectPage />} />
       </Routes>
     </ContentContainer>
     </BrowserRouter>
