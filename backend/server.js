@@ -37,7 +37,7 @@ const peopleRoutes = require('./src/routes/peopleRoutes')
 app.use('/api', peopleRoutes);
 
 //Use contactRoutes API for contact from functionality
-const contactRoutes = require('./routes/contactRoutes');
+const contactRoutes = require('./src/routes/contactRoutes');
 
 app.use('/api', contactRoutes);
 
