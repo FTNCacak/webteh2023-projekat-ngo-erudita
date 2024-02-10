@@ -1,6 +1,6 @@
 .mainHeader {
   text-align: center;
-  padding: 3rem ;
+  padding: 3rem;
   margin-top: 6rem;
 }
 .projectDiv {
@@ -8,8 +8,16 @@
     font-weight: 900;
   }
   flex-direction: row;
-  &:nth-of-type(2n){
+  &:nth-of-type(2n) {
     flex-direction: row-reverse;
+  }
+  @media (max-width: 992px) {
+    flex-direction: column-reverse;
+
+    &:nth-of-type(2n) {
+      flex-direction: column-reverse;
+    }
+    margin-bottom: 3rem;
   }
 }
 
@@ -41,7 +49,6 @@
     padding: 0 3rem;
   }
 }
-
 
 .contentProject {
   padding: 3rem;
