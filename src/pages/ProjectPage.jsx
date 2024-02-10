@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Container} from "react-bootstrap";
 import useHttpGet from "../Hooks/useHttpGet";
 import { useEffect } from "react";
 
@@ -13,11 +13,9 @@ const ProjectPage = () => {
   }, []);
 
   return (
-    <>
+    <Container>
+      <h1 className={styles.mainHeader}>Projekti</h1>
       <div className={styles.projectContainer}>
-        <h1 className={styles.mainHeader}>Projekti</h1>
-
-        
         {
           //Koristena je mapa da bi se proslo kroz sve elemente baze projekti
           //Znak pitanja je osiguranje da ne baca error dok se data ne ucita
@@ -28,7 +26,11 @@ const ProjectPage = () => {
                     <div className={styles.textProject}>
                       <h3>{data.project_name}</h3>
                       <p>{data.short_description}</p>
-                      <Link to={"/o-nama"}>Saznajte više</Link>
+                      <Link to={"/projekti/"+data.project_name
+                      .replaceAll(" ","-").toLowerCase().replaceAll("š","s")
+                      .replaceAll("č","c").replaceAll("ć","c").replaceAll("ž","z")
+                      .replaceAll("đ","dj")}>
+                        Saznajte više</Link>
                     </div>
                   </Col>
                   <Col md={8} sm={6} xs={12}>
@@ -44,7 +46,7 @@ const ProjectPage = () => {
           })
         }
         </div>
-    </>
+    </Container>
   );
 };
 export default ProjectPage;

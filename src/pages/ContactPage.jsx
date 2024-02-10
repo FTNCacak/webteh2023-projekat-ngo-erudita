@@ -9,10 +9,11 @@ import {
   faSquareXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import ContactForm from "../compontents/ContactForm";
+import { Container} from "react-bootstrap";
 
 const ContactPage = () => {
   return (
-    <>
+    <Container>
       <div className={styles.contactHeader}>
         <h1>KONTAKT</h1>
         <h5>Pišite nam ili nas posetite &#128515;</h5>
@@ -103,7 +104,7 @@ const ContactPage = () => {
         </Row>
       </div>
       <br />
-    </>
+    </Container>
   );
 };
 
