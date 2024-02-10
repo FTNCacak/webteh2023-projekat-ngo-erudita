@@ -7,10 +7,10 @@ import { useEffect } from "react";
 const ProjectPage = () => {
   const fetchData = useHttpGet("projects");
 
-  useEffect(() => {
-    if (fetchData.error === null && fetchData.loading === false)
-      console.log(fetchData.data);
-  }, []);
+//   useEffect(() => {
+//     if (fetchData.error === null && fetchData.loading === false)
+//       console.log(fetchData.data);
+//   }, []);
 
   return (
     <>
