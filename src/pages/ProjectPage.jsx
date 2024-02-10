@@ -23,7 +23,7 @@ const ProjectPage = () => {
           fetchData.data?.map((data) => {
             return (
               <Row className={styles.projectDiv} key={data.id}>
-                <Col md={4} sm={6} xs={12} className={styles.textCol}>
+                <Col lg={5} md={12} sm={12} xs={12} className={styles.textCol}>
                   <div className={styles.textProject}>
                     <h3>{data.project_name}</h3>
                     <p>{data.short_description}</p>
@@ -37,7 +37,7 @@ const ProjectPage = () => {
                     </Link>
                   </div>
                 </Col>
-                <Col md={8} sm={6} xs={12}>
+                <Col lg={7} md={12} sm={12} xs={12}>
                   <div className={styles.contentProject}>
                     <img
                       alt="projekat"
