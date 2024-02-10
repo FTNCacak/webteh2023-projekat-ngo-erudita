@@ -70,25 +70,25 @@ const TeamMemberPage = () => {
                 <ul>
                   {selectedData?.instagram ?
                   <li>
-                    <Link to={selectedData?.instagram}>
+                    <Link target="_blank" rel="noreferrer" to={selectedData?.instagram}>
                       Instagram
                     </Link></li>: null}
 
                  {selectedData?.facebook ? 
                   <li>
-                  <Link to={selectedData?.facebook}>
+                  <Link target="_blank" rel="noreferrer" to={selectedData?.facebook}>
                     Facebook
                   </Link></li>: null}
 
                   {selectedData?.linkedin ?
                   <li>
-                  <Link to={selectedData?.linkedin}>
+                  <Link target="_blank" rel="noreferrer" to={selectedData?.linkedin}>
                   LinkedIn
                   </Link></li>: null}
 
                   {selectedData?.twitter ?
                   <li>
-                  <Link to={selectedData?.twitter}>
+                  <Link target="_blank" rel="noreferrer" to={selectedData?.twitter}>
                   Twitter
                   </Link></li>: null}
                 </ul>
