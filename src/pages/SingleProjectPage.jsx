@@ -1,12 +1,10 @@
 import styles from "./SingleProjectPage.module.scss";
-import { Col, Container, Fade, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
 import useHttpGet from "../Hooks/useHttpGet";
 import { useEffect, useState } from "react";
-
-//import ImageSlider from "../compontents/ImageSlider";
-
 import { nameToPathFormat } from "../helpers/helpFunctions";
+
 import PhotoGallery from "../compontents/PhotoGallery";
 
 const SingleProjectPage = () => {
@@ -42,6 +40,7 @@ const SingleProjectPage = () => {
         }
       </div>
       <PhotoGallery imageProps={selectedData?.image_paths}/>
+
     </Container>
   );
 };
