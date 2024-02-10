@@ -18,8 +18,7 @@ return(
                                 decoding="async" 
                                 width="300" 
                                 height="300"
-                                src="https://www.erudita.rs/wp-content/uploads/2021/10/David-Sujdovic-scaled-e1634860507783-300x300.jpg"
-                                /*src={process.env.PUBLIC_URL + "/imgs/team/David-Sujdovic.jpg"}*/
+                                src={process.env.PUBLIC_URL + "/imgs/team/David-Sujdovic.jpg"}
                                 alt="David Sujdovic"
                                 sizes="(max-width: 300px) 100vw, 300px"
                             />  
@@ -34,8 +33,7 @@ return(
                             decoding="async" 
                             width="300" 
                             height="300"
-                            src="https://www.erudita.rs/wp-content/uploads/2021/10/Jovana-Jevremovic-300x300.jpg"
-                            /*src={process.env.PUBLIC_URL + "/imgs/team/David-Sujdovic.jpg"}*/
+                            src={process.env.PUBLIC_URL + "/imgs/team/David-Sujdovic.jpg"}
                             alt="Jovana Jevremović"
                             sizes="(max-width: 300px) 100vw, 300px"
                         /> 
