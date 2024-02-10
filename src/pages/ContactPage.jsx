@@ -13,7 +13,7 @@ import { Container} from "react-bootstrap";
 
 const ContactPage = () => {
   return (
-    <Container>
+    <Container className={'containerFix'}>
       <div className={styles.contactHeader}>
         <h1>KONTAKT</h1>
         <h5>Pišite nam ili nas posetite &#128515;</h5>

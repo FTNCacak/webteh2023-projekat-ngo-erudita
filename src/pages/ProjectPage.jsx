@@ -13,7 +13,7 @@ const ProjectPage = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className={'containerFix'}>
       <h1 className={styles.mainHeader}>Projekti</h1>
       <div className={styles.projectContainer}>
         {
