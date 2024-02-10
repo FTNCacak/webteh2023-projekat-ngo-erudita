@@ -17,7 +17,9 @@ const ContentContainer = (props) => {
       <nav className={styles.contentNavbar}>
         <Container>
           <div className={styles.navbarFlex}>
-            <Link className={styles.navbarLogoHolder} to="/">
+            <Link onClick={() => {
+    window.scroll(0, 0);
+  }} className={styles.navbarLogoHolder} to="/">
               <img
                 src={process.env.PUBLIC_URL + "/logos/logo_full.svg"}
                 alt="logo"
@@ -25,19 +27,27 @@ const ContentContainer = (props) => {
             </Link>
             <ul className={styles.navbarLinkHolder}>
               <li>
-                <Link to="/o-nama">O nama</Link>
+                <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/o-nama">O nama</Link>
               </li>
 
               <li>
-                <Link to="/projekti">Projekti</Link>
+                <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/projekti">Projekti</Link>
               </li>
 
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/blog">Blog</Link>
               </li>
 
               <li>
-                <Link to="/kontakt">Kontakt</Link>
+                <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/kontakt">Kontakt</Link>
               </li>
             </ul>
 
@@ -52,19 +62,27 @@ const ContentContainer = (props) => {
         <div className={`${styles.burgerContent} ${burgerOpen}`}>
           <ul>
             <li>
-              <Link to="/o-nama" onClick={changeBurger}>O nama</Link>
+              <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/o-nama" onClick={changeBurger}>O nama</Link>
             </li>
 
             <li>
-              <Link to="/projekti" onClick={changeBurger}>Projekti</Link>
+              <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/projekti" onClick={changeBurger}>Projekti</Link>
             </li>
 
             <li>
-              <Link to="/blog" onClick={changeBurger}>Blog</Link>
+              <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/blog" onClick={changeBurger}>Blog</Link>
             </li>
 
             <li>
-              <Link to="/kontakt" onClick={changeBurger}>Kontakt</Link>
+              <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to="/kontakt" onClick={changeBurger}>Kontakt</Link>
             </li>
           </ul>
           <div className={styles.burgerLogo} onClick={changeBurger}>
@@ -75,14 +93,16 @@ const ContentContainer = (props) => {
           </div>
         </div>
       </nav>
-      <Container>
+      
         <div className={styles.contentBox}>{props.children}</div>
-      </Container>
+      
       <footer className={styles.footerContent}>
         <Container>
           <Row>
             <Col md={3} sm={6} xs={12}>
-              <Link className={styles.footerLogoHolder} to="/">
+              <Link onClick={() => {
+    window.scroll(0, 0);
+  }} className={styles.footerLogoHolder} to="/">
                 <img
                   src={process.env.PUBLIC_URL + "/logos/logo_short.png"}
                   alt="logo"
