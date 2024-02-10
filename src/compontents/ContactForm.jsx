@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import styles from "./ContactForm.module.scss";
 import React, { useState } from 'react';
+import useHttpPost from "../Hooks/useHttpPost";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -35,28 +36,13 @@ const ContactForm = () => {
     return Object.keys(formErrors).length === 0;
   };
 
+  const {postData} = useHttpPost('contact')
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (response.ok) {
-        alert('Form submitted successfully!');
-        setFormData({ name: '', email: '', message: '' }); // Reset form fields
-      } else {
-        alert('Failed to submit the form.');
-      }
-    } catch (error) {
-      console.error('Submit error:', error);
-    }
+    postData(formData);
+    
   };
 
   return (
