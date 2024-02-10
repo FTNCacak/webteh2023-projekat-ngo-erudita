@@ -17,7 +17,13 @@ const ContentContainer = (props) => {
       <nav className={styles.contentNavbar}>
         <Container>
           <div className={styles.navbarFlex}>
-            <Link className={styles.navbarLogoHolder} to="/">
+            <Link
+              onClick={() => {
+                window.scroll(0, 0);
+              }}
+              className={styles.navbarLogoHolder}
+              to="/"
+            >
               <img
                 src={process.env.PUBLIC_URL + "/logos/logo_full.svg"}
                 alt="logo"
@@ -25,46 +31,106 @@ const ContentContainer = (props) => {
             </Link>
             <ul className={styles.navbarLinkHolder}>
               <li>
-                <Link to="/o-nama">O nama</Link>
+                <Link
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                  to="/o-nama"
+                >
+                  O nama
+                </Link>
               </li>
 
               <li>
-                <Link to="/projekti">Projekti</Link>
+                <Link
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                  to="/projekti"
+                >
+                  Projekti
+                </Link>
               </li>
 
               <li>
-                <Link to="/blog">Blog</Link>
+                <Link
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                  to="/blog"
+                >
+                  Blog
+                </Link>
               </li>
 
               <li>
-                <Link to="/kontakt">Kontakt</Link>
+                <Link
+                  onClick={() => {
+                    window.scroll(0, 0);
+                  }}
+                  to="/kontakt"
+                >
+                  Kontakt
+                </Link>
               </li>
             </ul>
 
             <div className={styles.navbarBurger} onClick={changeBurger}>
-              <div className={`${styles.menu} ${styles.btn1} ${burgerOpen}`} data-menu="1">
-                <div className={styles['icon-left']}></div>
-                <div className={styles['icon-right']}></div>
+              <div
+                className={`${styles.menu} ${styles.btn1} ${styles[`${burgerOpen}`]}`}
+                data-menu="1"
+              >
+                <div className={styles["icon-left"]}></div>
+                <div className={styles["icon-right"]}></div>
               </div>
             </div>
           </div>
         </Container>
-        <div className={`${styles.burgerContent} ${burgerOpen}`}>
+        <div className={`${styles.burgerContent} ${styles[`${burgerOpen}`]}`}>
           <ul>
             <li>
-              <Link to="/o-nama" onClick={changeBurger}>O nama</Link>
+              <Link
+                onClick={() => {
+                  changeBurger();
+                  window.scroll(0, 0);
+                }}
+                to="/o-nama"
+              >
+                O nama
+              </Link>
             </li>
 
             <li>
-              <Link to="/projekti" onClick={changeBurger}>Projekti</Link>
+              <Link
+                onClick={() => {
+                  changeBurger();
+                  window.scroll(0, 0);
+                }}
+                to="/projekti"
+              >
+                Projekti
+              </Link>
             </li>
 
             <li>
-              <Link to="/blog" onClick={changeBurger}>Blog</Link>
+              <Link
+                onClick={() => {
+                  changeBurger();
+                  window.scroll(0, 0);
+                }}
+                to="/blog"
+              >
+                Blog
+              </Link>
             </li>
 
             <li>
-              <Link to="/kontakt" onClick={changeBurger}>Kontakt</Link>
+              <Link
+                onClick={changeBurger}
+                to="/kontakt"
+              >
+                Kontakt
+              </Link>
             </li>
           </ul>
           <div className={styles.burgerLogo} onClick={changeBurger}>
@@ -75,14 +141,20 @@ const ContentContainer = (props) => {
           </div>
         </div>
       </nav>
-      <Container>
-        <div className={styles.contentBox}>{props.children}</div>
-      </Container>
+
+      <div className={styles.contentBox}>{props.children}</div>
+
       <footer className={styles.footerContent}>
         <Container>
           <Row>
             <Col md={3} sm={6} xs={12}>
-              <Link className={styles.footerLogoHolder} to="/">
+              <Link
+                onClick={() => {
+                  window.scroll(0, 0);
+                }}
+                className={styles.footerLogoHolder}
+                to="/"
+              >
                 <img
                   src={process.env.PUBLIC_URL + "/logos/logo_short.png"}
                   alt="logo"
@@ -105,23 +177,20 @@ const ContentContainer = (props) => {
 
               <ul>
                 <li>
-                  Statut - <a href="https://youtube.com">PDF</a>
-                </li>
-                <li>
-                  Odluka o osnivanju - <a href="https://youtube.com">PDF</a>
+                  Statut - <a target='_blank' rel="noreferrer" href={process.env.PUBLIC_URL+'/downloadable/Statut.pdf'}>PDF</a>
                 </li>
               </ul>
             </Col>
 
-            <Col md={3} sm={6} xs={12} >
+            <Col md={3} sm={6} xs={12}>
               <ul>
                 <li>Bulevar Vuka Karadžića 108</li>
                 <li>32102, Čačak, Srbija</li>
                 <li>
-                  <a href="https://youtube.com">kontakt@erudita.rs</a>
+                  <Link to='/kontakt'>kontakt@erudita.rs</Link>
                 </li>
                 <li>
-                  <a href="https://youtube.com">+381 69 308 62 07</a>
+                  <Link to='/kontakt'>+381 69 308 62 07</Link>
                 </li>
               </ul>
             </Col>
@@ -130,13 +199,17 @@ const ContentContainer = (props) => {
               <h5>Pratite nas i na:</h5>
               <ul>
                 <li>
-                  <a href="https://www.instagram.com/udruzenje_erudita/">Instagram</a>
+                  <a href="https://www.instagram.com/udruzenje_erudita/">
+                    Instagram
+                  </a>
                 </li>
                 <li>
                   <a href="https://www.facebook.com/erudita.rs">Facebook</a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/company/udruzenje-gradjana-erudita/">LinkedIn</a>
+                  <a href="https://www.linkedin.com/company/udruzenje-gradjana-erudita/">
+                    LinkedIn
+                  </a>
                 </li>
                 <li>
                   <a href="https://twitter.com/eruditaaa">Twitter</a>

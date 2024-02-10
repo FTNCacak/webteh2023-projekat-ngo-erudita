@@ -1,30 +1,37 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './styles/styles.scss';
-import Home from './pages/Home';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./styles/styles.scss";
+import Home from "./pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Test from './pages/Test';
-import ContentContainer from './compontents/ContentContainer';
+import ContentContainer from "./compontents/ContentContainer";
+import ContactPage from "./pages/ContactPage";
+import AboutUs from "./pages/AboutUs";
+import ProjectPage from "./pages/ProjectPage";
+import SingleProjectPage from "./pages/SingleProjectPage";
+import TeamMemberPage from "./pages/TeamMemberPage";
+import PageNotFound from "./pages/PageNotFound";
+import BlogPage from "./pages/BlogPage";
+import BlogPost from "./pages/BlogPost";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     {/* We implemented routing in order to change what was rendered */}
-    
+
     <BrowserRouter>
-    <ContentContainer>
-      <Routes>
-        <Route path="/" element={<Home />}>
-           {/* <Route index element={<Home />} /> */}
-          {/*<Route path="contact" element={<Contact />} />
-          <Route path="*" element={<NoPage />} /> */}
-        </Route>
-        
-        <Route path="/kepo" element={<Test />} />
-      </Routes>
-    </ContentContainer>
+      <ContentContainer>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/kontakt" element={<ContactPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:projectUrl" element={<BlogPost />} />
+          <Route path="/o-nama" element={<AboutUs />} />
+          <Route path="/tim/:projectUrl" element={<TeamMemberPage />} />
+          <Route path="/projekti" element={<ProjectPage />} />
+          <Route path="/projekti/:projectUrl" element={<SingleProjectPage />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </ContentContainer>
     </BrowserRouter>
-    
   </React.StrictMode>
 );
-
