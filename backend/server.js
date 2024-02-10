@@ -36,6 +36,11 @@ const peopleRoutes = require('./src/routes/peopleRoutes')
 
 app.use('/api', peopleRoutes);
 
+//Use contactRoutes API for contact from functionality
+const contactRoutes = require('./src/routes/contactRoutes');
+
+app.use('/api', contactRoutes);
+
 // Define a route for the root URL
 app.get('/', (req, res) => {
   // Send a response when this route is accessed
