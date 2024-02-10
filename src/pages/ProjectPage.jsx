@@ -26,7 +26,9 @@ const ProjectPage = () => {
                     <div className={styles.textProject}>
                       <h3>{data.project_name}</h3>
                       <p>{data.short_description}</p>
-                      <Link to={"/projekti/"+data.project_name
+                      <Link onClick={() => {
+    window.scroll(0, 0);
+  }} to={"/projekti/"+data.project_name
                       .replaceAll(" ","-").toLowerCase().replaceAll("š","s")
                       .replaceAll("č","c").replaceAll("ć","c").replaceAll("ž","z")
                       .replaceAll("đ","dj")}>

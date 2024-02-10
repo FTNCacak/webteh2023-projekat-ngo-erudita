@@ -20,7 +20,7 @@ const SingleProjectPage = () => {
           .replaceAll("č","c").replaceAll("ć","c").replaceAll("ž","z")
           .replaceAll("đ","dj") === projectUrl;})[0]);
 
-    }, []);
+    }, [fetchData]);
 
     
       return (
