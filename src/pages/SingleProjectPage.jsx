@@ -33,10 +33,10 @@ const SingleProjectPage = () => {
               {
                 <Row className={styles.projectDiv} >
                   <Col>
-                  <img src={process.env.PUBLIC_URL + selectedData?.photo}>
-                    </img>
-                    <h1>{selectedData?.project_name}</h1>
-                    <p>{selectedData?.long_description}</p>   
+                      <h1>{selectedData?.project_name}</h1>
+                      <img src={process.env.PUBLIC_URL + selectedData?.photo}>
+                      </img>
+                      <p>{selectedData?.long_description}</p>   
                   </Col>
                 </Row>    
               }
