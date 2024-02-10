@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
 import styles from "./ProjectPage.module.scss";
 import { Col, Row } from "react-bootstrap";
+import useHttpGet from "../Hooks/useHttpGet";
+import { useEffect } from "react";
 
 const ProjectPage = () => {
+
+  const fetchData = useHttpGet('projects');
+
+  useEffect(()=>{
+    if(fetchData.error==null && fetchData.loading == false)
+        console.log(fetchData.data);
+  }, []);
+
   return (
     <>
       <div className={styles.projectContainer}>
@@ -23,6 +33,7 @@ const ProjectPage = () => {
           <Col md={8} sm={6} xs={12}>
             <div className={styles.contentProject}>
               <img
+                alt='projekat'
                 src={
                   process.env.PUBLIC_URL +
                   "/imgs/projects/Srusimo-4-zida-photo-1.png"
