@@ -34,6 +34,9 @@ app.use('/api', projectRoutes);
 //Use peopleRoutes to create API for frontend to use data from the Azure DB
 const peopleRoutes = require('./src/routes/peopleRoutes')
 
+const blogRoutes = require('./src/routes/blogRoutes');
+app.use('/api', blogRoutes);
+
 app.use('/api', peopleRoutes);
 
 //Use contactRoutes API for contact from functionality

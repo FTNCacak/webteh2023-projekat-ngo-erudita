@@ -1,0 +1,56 @@
+.aboutUsPage{
+    padding: 0px;
+    margin: 0px;
+    h1{
+        text-align: center;
+        font-weight: 900;
+    }
+
+    h5{
+        text-align: justify;
+    }
+}
+
+.aboutUsHeader{
+    h1{
+       padding: 3rem 0; 
+    }
+    
+}
+
+.pictureColumn{
+    padding: 3rem 0;
+    h3{
+        margin-top: 5px;
+        font-weight: 900;
+        text-align: center;
+        color: var(--secondaryColor);
+    }
+
+    h5{
+        font-weight: 900;
+        text-align: center;
+        color: var(--primaryColor);
+    }
+}
+
+.imgLogoHolder{
+    text-decoration: none;
+    a:hover{
+
+    }
+
+    img{
+        height: unset;
+        object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+}
+
+.teamPictures{
+    img{
+        border-radius: 300px;
+    }
+}
+  
