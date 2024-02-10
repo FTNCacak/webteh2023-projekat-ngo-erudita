@@ -28,21 +28,21 @@ app.use('/api/auth', authRoutes);
 
 //Use projectRoutes to create API for frontend to use data from the Azure DB
 const projectRoutes = require('./src/routes/projectRoutes');
-
 app.use('/api', projectRoutes);
 
 //Use peopleRoutes to create API for frontend to use data from the Azure DB
 const peopleRoutes = require('./src/routes/peopleRoutes')
+app.use('/api', peopleRoutes);
 
 const blogRoutes = require('./src/routes/blogRoutes');
 app.use('/api', blogRoutes);
 
-app.use('/api', peopleRoutes);
-
 //Use contactRoutes API for contact from functionality
 const contactRoutes = require('./src/routes/contactRoutes');
-
 app.use('/api', contactRoutes);
+
+const carouselRoutes = require('./src/routes/carouselRoutes')
+app.use('/api', carouselRoutes);
 
 // Define a route for the root URL
 app.get('/', (req, res) => {
