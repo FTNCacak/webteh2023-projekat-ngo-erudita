@@ -30,8 +30,7 @@
     h5{
         font-weight: 900;
         text-align: center;
-        color: var(--whiteColor);
-        max-width: 300px;
+        color: var(--primaryColor);
     }
 }
 
@@ -42,7 +41,10 @@
     }
 
     img{
+        height: unset;
         object-fit: cover;
+        width: 100%;
+        aspect-ratio: 1/1;
     }
 }
 
@@ -50,6 +52,5 @@
     img{
         border-radius: 300px;
     }
-    
 }
   
