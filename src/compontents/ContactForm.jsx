@@ -114,10 +114,11 @@ const ContactForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
 
-        <Button variant="primary" type="submit" className={styles.formBtn}>
-          Pošalji poruku
-        </Button>
-      </Form>
+      
+      <Button variant="primary" type="submit" className={styles.formBtn}>
+        Pošalji poruku
+      </Button>
+    </Form>
     </>
   );
 };
