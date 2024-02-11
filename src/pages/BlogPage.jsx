@@ -15,7 +15,7 @@ const BlogPage = () => {
 
   return (
     <Container className={"containerFix"}>
-      <h1 className={styles.blogHeading}>BLOG</h1>
+      <h1 className={styles.blogHeading}>Blog</h1>
       <Row className={styles.blogColumn}>
         {fetchData.data
           ?.toReversed()

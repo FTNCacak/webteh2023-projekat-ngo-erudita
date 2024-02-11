@@ -1,9 +1,13 @@
 .mainHeader {
   text-align: center;
-  padding: 3rem;
+  font-weight: 900;
+  font-size: 3rem;
+  padding: 3rem 0;
   margin-top: 6rem;
+  color: var(--secondGolden);
 }
 .projectDiv {
+  color: var(--whiteColor);
   h5 {
     font-weight: 900;
   }
@@ -30,7 +34,10 @@
 .textProject {
   text-align: justify;
   h3 {
+    margin: 1.5rem 3rem;
+    font-size: 2rem;
     text-align: center;
+    color: var(--secondGolden);
   }
 
   a {
@@ -40,13 +47,14 @@
     color: var(--secondGolden);
     transition: all 0.2s ease-in-out;
     &:hover {
-      color: var(--secondaryColor);
+      font-weight: bold;
       transition: all 0.15s ease-in-out;
     }
   }
 
   p {
-    padding: 0 3rem;
+    padding: 0 2rem;
+    font-size: large;
   }
 }
 
@@ -57,5 +65,6 @@
     width: 100%;
     max-height: 400px;
     object-fit: cover;
+    border-radius: 20px;
   }
 }
