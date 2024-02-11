@@ -50,4 +50,5 @@ router.post('/carousels', [
     }
 });
 
+//Exporting carousel routes
 module.exports = router;

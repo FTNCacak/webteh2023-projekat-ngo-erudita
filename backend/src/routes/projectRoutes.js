@@ -74,4 +74,6 @@ router.post('/projects', [
   }
 });
 
+
+//Exporting project routes
 module.exports = router;

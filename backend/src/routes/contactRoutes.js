@@ -48,4 +48,6 @@ router.get('/contact', async (req, res) => {
   }
 });
 
+
+//Exporting contact routes
 module.exports = router;

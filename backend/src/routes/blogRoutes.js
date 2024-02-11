@@ -72,4 +72,5 @@ router.post('/blogs', [
   }
 });
   
+//Exporting blog routes
 module.exports = router;

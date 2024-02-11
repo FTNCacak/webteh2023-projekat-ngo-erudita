@@ -59,4 +59,5 @@ router.post('/team', [
     }
 });
 
+//Exporting people routes
 module.exports = router;

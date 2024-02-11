@@ -15,4 +15,6 @@ router.get('/tags', async (req, res) => {
     }
   });
 
+
+  //Exporting tag routes
   module.exports = router;
