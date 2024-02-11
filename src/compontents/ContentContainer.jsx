@@ -77,7 +77,9 @@ const ContentContainer = (props) => {
 
             <div className={styles.navbarBurger} onClick={changeBurger}>
               <div
-                className={`${styles.menu} ${styles.btn1} ${styles[`${burgerOpen}`]}`}
+                className={`${styles.menu} ${styles.btn1} ${
+                  styles[`${burgerOpen}`]
+                }`}
                 data-menu="1"
               >
                 <div className={styles["icon-left"]}></div>
@@ -125,10 +127,7 @@ const ContentContainer = (props) => {
             </li>
 
             <li>
-              <Link
-                onClick={changeBurger}
-                to="/kontakt"
-              >
+              <Link onClick={changeBurger} to="/kontakt">
                 Kontakt
               </Link>
             </li>
@@ -165,19 +164,26 @@ const ContentContainer = (props) => {
             <Col md={3} sm={6} xs={12}>
               <ul>
                 <li>
-                  <strong>PIB:</strong>112421762
+                  <strong>PIB:&nbsp;</strong>112421762
                 </li>
                 <li>
-                  <strong>MB:</strong>28320876
+                  <strong>MB:&nbsp;</strong>28320876
                 </li>
                 <li>
-                  <strong>TR:</strong>340-11029152-47
+                  <strong>TR:&nbsp;</strong>340-11029152-47
                 </li>
               </ul>
 
               <ul>
                 <li>
-                  Statut - <a target='_blank' rel="noreferrer" href={process.env.PUBLIC_URL+'/downloadable/Statut.pdf'}>PDF</a>
+                  Statut -{" "}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href={process.env.PUBLIC_URL + "/downloadable/Statut.pdf"}
+                  >
+                    PDF
+                  </a>
                 </li>
               </ul>
             </Col>
@@ -187,10 +193,10 @@ const ContentContainer = (props) => {
                 <li>Bulevar Vuka Karadžića 108</li>
                 <li>32102, Čačak, Srbija</li>
                 <li>
-                  <Link to='/kontakt'>kontakt@erudita.rs</Link>
+                  <Link to="/kontakt">kontakt@erudita.rs</Link>
                 </li>
                 <li>
-                  <Link to='/kontakt'>+381 69 308 62 07</Link>
+                  <Link to="/kontakt">+381 69 308 62 07</Link>
                 </li>
               </ul>
             </Col>
@@ -199,20 +205,40 @@ const ContentContainer = (props) => {
               <h5>Pratite nas i na:</h5>
               <ul>
                 <li>
-                  <a href="https://www.instagram.com/udruzenje_erudita/">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.instagram.com/udruzenje_erudita/"
+                  >
                     Instagram
                   </a>
                 </li>
                 <li>
-                  <a href="https://www.facebook.com/erudita.rs">Facebook</a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.facebook.com/erudita.rs"
+                  >
+                    Facebook
+                  </a>
                 </li>
                 <li>
-                  <a href="https://www.linkedin.com/company/udruzenje-gradjana-erudita/">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://www.linkedin.com/company/udruzenje-gradjana-erudita/"
+                  >
                     LinkedIn
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/eruditaaa">Twitter</a>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://twitter.com/eruditaaa"
+                  >
+                    Twitter
+                  </a>
                 </li>
               </ul>
             </Col>

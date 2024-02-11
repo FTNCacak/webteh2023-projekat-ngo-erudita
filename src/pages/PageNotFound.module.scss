@@ -3,11 +3,13 @@
 }
 
 .pageNF {
+    
+    text-align: center;
+    color:var(--whiteColor);
     h1 {
         padding-top: 6rem;
-        text-align: center;
     }
-    h4 {
-        text-align: center;
+    a {
+        color: var(--secondaryColor);
     }
 }
