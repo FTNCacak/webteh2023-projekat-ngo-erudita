@@ -2,7 +2,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
-// import styles from "./ContactForm.module.scss";
+import styles from "./ContactForm.module.scss";
 import React, { useState } from "react";
 import useHttpPost from "../Hooks/useHttpPost";
 import { Alert } from "react-bootstrap";
