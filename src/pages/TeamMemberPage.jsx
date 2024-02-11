@@ -63,7 +63,7 @@ const TeamMemberPage = () => {
         </Col>
         <Col lg={3} md={4} sm={12} xs={12} className={styles.teamContact}>
             <div>
-                <h5><FontAwesomeIcon icon={faEnvelope}/> {selectedData?.email}</h5>
+                <h5 className={styles.teamEnv} ><FontAwesomeIcon icon={faEnvelope}/> {selectedData?.email}</h5>
                 <hr />
                 <h5>Društvene mreže:</h5>
                 <br />

@@ -46,7 +46,7 @@ const ContactForm = () => {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className={styles.formContainer}>
       <Row className="mb-3">
         <Form.Group as={Col} controlId="name">
           <Form.Label>Ime i prezime</Form.Label>
@@ -66,8 +66,8 @@ const ContactForm = () => {
         <Form.Control.Feedback type="invalid">{errors.message}</Form.Control.Feedback>
       </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
+      <Button variant="primary" type="submit" className={styles.formBtn}>
+        Pošalji poruku
       </Button>
     </Form>
   );

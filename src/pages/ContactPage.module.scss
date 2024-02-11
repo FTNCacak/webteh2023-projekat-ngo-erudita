@@ -1,6 +1,7 @@
 
 .contactHeader {
     text-align: center;
+    color: var(--whiteColor);
     margin-top: 6rem;
     padding: 3rem 0;
     h1{
@@ -10,7 +11,7 @@
 
 .contactContent {
     background-color: var(--lightGray);
-    border-radius: 8px;
+    border-radius: 20px;
     padding: 20px;
     ul {
         list-style-type: none;
@@ -19,7 +20,7 @@
 
       a {
         text-decoration: none;
-        color: var(--secondGolden);
+        color: var(--primaryColor);
       }
 
 } 

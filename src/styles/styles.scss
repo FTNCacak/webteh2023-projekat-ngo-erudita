@@ -10,10 +10,11 @@
   --secondGolden: #e9b015;
   --bgColor: #d9dbf1;
   --whiteColor: #fafafa;
-  --blackColor: #070707;
+  --blackColor: #1b1d21;
   --lightBlue: #708cb4;
   --lightPurple: #707cbc;
   --lightGray: #e8e8e8;
+  --darkGray:#393939;
 
   //Breakpoints
   --break-sm: 576px;
@@ -24,7 +25,7 @@
 }
 
 body {
-  background-color: var(--bgColor);
+  background-color: var(--primaryColor);
   margin: 0;
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;

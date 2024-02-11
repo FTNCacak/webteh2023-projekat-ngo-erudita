@@ -7,7 +7,7 @@
     h4{
       margin:1rem ;
       font-weight: 900;
-      color: var(--secondaryColor);  
+      color: var(--secondGolden);  
     }
     
     img{
@@ -16,7 +16,7 @@
         width: 100%;
         aspect-ratio: 1/1;
         border-radius: 300px;
-        border:7px solid var(--secondaryColor);
+        border:7px solid var(--secondGolden);
         border-radius: 500px;
         -webkit-border-radius: 500px;
         -moz-border-radius: 500px;
@@ -25,6 +25,7 @@
 }
 
 .teamText{
+    color: var(--whiteColor);  
     padding: 4rem;
     display: flex;
     text-align: justify;
@@ -34,12 +35,15 @@
 }
 
 .teamContact{
+    color: var(--whiteColor); 
     display: flex;
     text-align: justify;
     align-items: center;
     ul{
         li{
             text-decoration: none;
+            font-weight: bold;
+            color: var(--secondGolden); 
         }
     }
 
@@ -58,4 +62,8 @@
         justify-content: center;
       }
 
+}
+
+.teamEnv{
+    color: var(--secondaryColor);
 }
