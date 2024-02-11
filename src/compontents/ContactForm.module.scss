@@ -1,0 +1,15 @@
+.formContainer{
+    color: var(--whiteColor);
+}
+
+.formBtn{
+    font-weight: 900;
+    background-color: var(--secondaryColor);
+    border:3px solid var(--secondaryColor);
+    &:hover {
+        color: var(--primaryColor);
+        border:3px solid var(--secondGolden);
+        background-color: var(--secondGolden);
+        transition: all 0.15s ease-in-out;
+      }
+}

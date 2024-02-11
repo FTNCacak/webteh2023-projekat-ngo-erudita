@@ -1,12 +1,9 @@
 .contentNavbar {
-  background-color: var(--lightBlue);
+  background-color: var(--whiteColor);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 5;
-}
-.contentBox {
-  //margin-top: 5rem;
 }
 
 .navbarFlex {
@@ -15,7 +12,7 @@
 }
 
 .navbarLogoHolder {
-  padding: 0.25rem 0;
+  padding: 0.15rem 0;
   img {
     height: 100%;
   }
@@ -38,7 +35,7 @@
       transition: color 0.2s ease-in-out;
     }
     a:hover {
-      color: var(--whiteColor);
+      color: var(--secondGolden);
       transition: color 0.15s ease-in-out;
     }
   }
@@ -171,7 +168,7 @@
   width: 100%;
   top: 0;
   z-index: -1;
-  background-color: var(--lightBlue);
+  background-color: var(--whiteColor);
   transform: translateX(-100vw);
   transition: all 0.3s ease-in;
   flex-direction: column;
@@ -180,7 +177,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 5rem;
     img {
       width: 80%;
       margin: 0 auto;
@@ -194,20 +191,27 @@
     li {
       a {
         text-decoration: none;
-        color: var(--whiteColor);
+        color: var(--primaryColor);
+        font-weight: bold;
+        font-size: larger;
         display: block;
         padding: 1rem 0;
         text-transform: uppercase;
         text-align: center;
+
+        &:hover{
+          color: var(--secondGolden);
+          transition: all 0.15s ease-in; 
+        }
       }
     }
   }
 }
 
 .footerContent {
-  background-color: var(--lightBlue);
+  background-color: var(--blackColor);
   width: 100%;
-
+  color: var(--whiteColor);
   padding: 5rem 0;
   ul {
     list-style-type: none;
@@ -215,7 +219,12 @@
   }
   a {
     text-decoration: none;
-    color: var(--secondGolden);
+    color: var(--secondaryColor);
+    &:hover{
+      color: var(--secondGolden);
+      transition: all 0.1s ease-in;
+      font-weight: bold;
+    }
   }
 
   @media (max-width:576px) {
