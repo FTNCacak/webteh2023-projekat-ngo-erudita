@@ -4,10 +4,15 @@
     h1{
         text-align: center;
         font-weight: 900;
+        font-size: 3rem;
+        padding: 3rem 0;
+        margin-top: 6rem;
+        color: var(--secondGolden);
     }
 
     h5{
         text-align: justify;
+        color: var(--whiteColor);
     }
 }
 
@@ -30,7 +35,8 @@
     h5{
         font-weight: 900;
         text-align: center;
-        color: var(--primaryColor);
+        color: var(--whiteColor);
+        margin-bottom: 2rem;
     }
 }
 
