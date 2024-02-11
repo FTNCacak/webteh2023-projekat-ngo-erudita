@@ -72,7 +72,7 @@ const ContactForm = () => {
       <Form onSubmit={handleSubmit}>
         <Row className="mb-3">
           <Form.Group as={Col} controlId="name">
-            <Form.Label>Ime i prezime</Form.Label>
+            <Form.Label className={styles.formLabel}>Ime i prezime</Form.Label>
             <Form.Control
               type="text"
               placeholder="Vaše ime i prezime"
@@ -85,7 +85,7 @@ const ContactForm = () => {
             </Form.Control.Feedback>
           </Form.Group>
           <Form.Group as={Col} controlId="email">
-            <Form.Label>Email</Form.Label>
+            <Form.Label className={styles.formLabel}>Email</Form.Label>
             <Form.Control
               type="email"
               placeholder="Vaš email"
@@ -100,7 +100,7 @@ const ContactForm = () => {
         </Row>
 
         <Form.Group className="mb-3" controlId="message">
-          <Form.Label>Poruka</Form.Label>
+          <Form.Label className={styles.formLabel}>Poruka</Form.Label>
           <Form.Control
             as="textarea"
             rows={3}
