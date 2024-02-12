@@ -19,7 +19,7 @@ const BlogPost = () => {
       //provera da li se naziv projekta podudara sa url
       setSelectedData(
         fetchData.data.filter((data) => {
-            console.log(data.media_urls);
+            // console.log(data.media_urls);
           return nameToPathFormat(data.title) === projectUrl;
         })[0]
       );

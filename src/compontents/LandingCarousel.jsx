@@ -20,9 +20,9 @@ const LandingCarousel = () => {
     autoplaySpeed: 5000,
   };
 
-  useEffect(() => {
-    console.log();
-  });
+  // useEffect(() => {
+  //   console.log();
+  // });
   return (
     <>
       <Slider {...settings} className={styles.slider}>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { baseURI } from '../helpers/base';
 
 const useHttpGet = ( apiPath ) => {
   const [data, setData] = useState(null);
@@ -7,7 +8,6 @@ const useHttpGet = ( apiPath ) => {
   const [error, setError] = useState(null);
 
   //
-  const baseURI = 'http://localhost:3001/api/'
   useEffect(() => {
     const fetchData = async () => {
       try {

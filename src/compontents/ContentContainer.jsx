@@ -193,10 +193,24 @@ const ContentContainer = (props) => {
                 <li>Bulevar Vuka Karadžića 108</li>
                 <li>32102, Čačak, Srbija</li>
                 <li>
-                  <Link to="/kontakt">kontakt@erudita.rs</Link>
+                  <Link
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
+                    to="/kontakt"
+                  >
+                    kontakt@erudita.rs
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/kontakt">+381 69 308 62 07</Link>
+                  <Link
+                    onClick={() => {
+                      window.scroll(0, 0);
+                    }}
+                    to="/kontakt"
+                  >
+                    +381 69 308 62 07
+                  </Link>
                 </li>
               </ul>
             </Col>

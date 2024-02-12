@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { baseURI } from "../helpers/base";
 
 const useHttpPost = (apiPath) => {
   const [data, setData] = useState(null);
@@ -7,7 +8,6 @@ const useHttpPost = (apiPath) => {
   const [error, setError] = useState(null);
 
   //
-  const baseURI = "http://localhost:3001/api/";
   const postData = async (body) => {
     try {
       //Api path je putanja do pristupnih tacaka ( team, projects, blog, etc.)
