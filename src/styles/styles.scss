@@ -1,0 +1,65 @@
+//Importing stuff
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "~bootstrap/scss/bootstrap";
+// Defining variables
+:root {
+  //Colors
+  --primaryColor: #0A2351;
+  --secondaryColor: #B6922E;
+  --secondGolden: #e9b015;
+  --bgColor: #d9dbf1;
+  --whiteColor: #fafafa;
+  --blackColor: #1b1d21;
+  --lightBlue: #708cb4;
+  --lightPurple: #707cbc;
+  --lightGray: #e8e8e8;
+  --darkGray:#393939;
+
+  //Breakpoints
+  --break-sm: 576px;
+  --break-md: 768px;
+  --break-lg: 992px;
+  --break-xl: 1200px;
+  --break-xxl: 1400px;
+}
+
+body {
+  background-color: var(--primaryColor);
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.containerFix {
+  margin-top: 5rem;
+  min-height: calc(100vh - 390px);
+}
+
+.image-gallery {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  .image-gallery-content {
+    width:100%;
+    .image-gallery-slide {
+      .image-gallery-image {
+        max-height: 600px;
+      }
+    }
+    &.fullscreen {
+      .image-gallery-slide {
+        .image-gallery-image {
+          max-height: 100vh;
+        }
+      }
+    }
+  }
+}

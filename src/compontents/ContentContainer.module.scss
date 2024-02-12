@@ -1,0 +1,250 @@
+.contentNavbar {
+  background-color: var(--whiteColor);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 5;
+}
+
+.navbarFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbarLogoHolder {
+  padding: 0.15rem 0;
+  img {
+    height: 100%;
+  }
+}
+
+.navbarLinkHolder {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+  align-content: center;
+  li {
+    a {
+      font-weight: 600;
+      font-size: 1.125rem;
+      padding: 1.25rem 0rem 1.25rem 1rem;
+      color: var(--primaryColor);
+      text-decoration: none;
+      display: block;
+      transition: color 0.2s ease-in-out;
+    }
+    a:hover {
+      color: var(--secondGolden);
+      transition: color 0.15s ease-in-out;
+    }
+  }
+  @media (max-width: 992px) {
+    display: none;
+  }
+}
+.navbarBurger {
+  display: none;
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+}
+@mixin btn($left, $top) {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  top: 0;
+  left: $left;
+  transition-duration: 0.5s;
+  transform: scale(0.6);
+}
+
+@mixin icon($height, $width) {
+  transition-duration: 0.5s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 30px;
+  background-color: var(--primaryColor);
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: var(--primaryColor);
+  content: "";
+  top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: var(--primaryColor);
+  content: "";
+  top: $top;
+}
+
+.btn1 {
+  @include btn(0px, 100px);
+
+  .icon-left {
+    @include icon(8px, 30px);
+    left: 0px;
+
+    &:before {
+      @include icon-before(8px, 30px, -20px);
+    }
+
+    &:after {
+      @include icon-after(8px, 30px, 20px);
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon-right {
+    @include icon(8px, 30px);
+    left: 30px;
+
+    &:before {
+      @include icon-before(8px, 30px, -20px);
+    }
+
+    &:after {
+      @include icon-after(8px, 30px, 20px);
+    }
+  }
+
+  &.open {
+    .icon-left {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(45deg) scaleX(1.4) translate(4px, 4px);
+      }
+
+      &:after {
+        transform: rotateZ(-45deg) scaleX(1.4) translate(4px, -4px);
+      }
+    }
+
+    .icon-right {
+      transition-duration: 0.5s;
+      background: transparent;
+
+      &:before {
+        transform: rotateZ(-45deg) scaleX(1.4) translate(-4px, 4px);
+      }
+
+      &:after {
+        transform: rotateZ(45deg) scaleX(1.4) translate(-4px, -4px);
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.burgerContent {
+  display: none;
+  @media (max-width: 992px) {
+    display: flex;
+  }
+  &.open {
+    transform: translateX(0vw);
+    transition: all 0.4s ease-out;
+  }
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  z-index: -1;
+  background-color: var(--whiteColor);
+  transform: translateX(-100vw);
+  transition: all 0.3s ease-in;
+  flex-direction: column;
+  justify-content: space-between;
+  .burgerLogo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+    img {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+
+  ul {
+    padding: 0;
+    margin-top: 100px;
+    list-style-type: none;
+    li {
+      a {
+        text-decoration: none;
+        color: var(--primaryColor);
+        font-weight: bold;
+        font-size: larger;
+        display: block;
+        padding: 1rem 0;
+        text-transform: uppercase;
+        text-align: center;
+
+        &:hover{
+          color: var(--secondGolden);
+          transition: all 0.15s ease-in; 
+        }
+      }
+    }
+  }
+}
+
+.footerContent {
+  background-color: var(--blackColor);
+  width: 100%;
+  color: var(--whiteColor);
+  padding: 5rem 0;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    color: var(--secondaryColor);
+    &:hover{
+      color: var(--secondGolden);
+      transition: all 0.1s ease-in;
+      font-weight: bold;
+    }
+  }
+
+  @media (max-width:576px) {
+    text-align: center;
+  }
+}
+
+.footerFlex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footerLogoHolder {
+  display: block;
+  height: 150px;
+  img {
+    height: 100%;
+  }
+}
+
+
+.footerContent {
+}
