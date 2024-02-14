@@ -14,7 +14,7 @@ import { Container} from "react-bootstrap";
 const ContactPage = () => {
   return (
     <Container className={'containerFix'}>
-      <div className={styles.contactHeader}>
+     <div className={styles.contactHeader}>
         <h1>KONTAKT</h1>
         <h5>Pišite nam ili nas posetite &#128515;</h5>
       </div>
@@ -99,6 +99,7 @@ const ContactPage = () => {
               className="w-100"
               height="500"
               loading="lazy"
+              default-src =''
             ></iframe>
           </Col>
         </Row>

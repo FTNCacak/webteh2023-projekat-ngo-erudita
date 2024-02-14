@@ -1,6 +1,7 @@
 // Import the express module
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const bcrypt = require('bcryptjs'); // For password hashing
 const jwt = require('jsonwebtoken'); // For JWT handling
 const helmet = require('helmet'); // For security
@@ -45,11 +46,11 @@ const carouselRoutes = require('./src/routes/carouselRoutes')
 app.use('/api', carouselRoutes);
 
 
-// Define a route for the root URL
-app.get('/', (req, res) => {
-  // Send a response when this route is accessed
-  res.send('Backend server');
-});
+// // Define a route for the root URL
+// app.get('/', (req, res) => {
+//   // Send a response when this route is accessed
+//   res.send('Backend server');
+// });
 
 // Error Handling Middleware
 app.use((error, req, res, next) => {
@@ -57,8 +58,16 @@ app.use((error, req, res, next) => {
   res.json({ error: error.message });
 });
 
-// Define the port to listen on
-const PORT = process.env.PORT || 3001;
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, 'build')));
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/build/index.html'));
+});
+
+const PORT = process.env.PORT || 5001; // Use port from .env or 5001 as a fallback
 
 // Start the server and listen on the defined port
 app.listen(PORT, () => {
